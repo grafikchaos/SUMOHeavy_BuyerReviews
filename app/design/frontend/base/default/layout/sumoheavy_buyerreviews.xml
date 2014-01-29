@@ -27,7 +27,7 @@ Default layout, loads most of the pages
     <reference name="head">
         <action method="addItem">
             <type>skin_css</type>
-            <name>sumoheavy_buyerreviews/buyerreviews.css</name>
+            <name>sumoheavy_buyerreviews/css/buyerreviews.css</name>
         </action>
     </reference>
 
