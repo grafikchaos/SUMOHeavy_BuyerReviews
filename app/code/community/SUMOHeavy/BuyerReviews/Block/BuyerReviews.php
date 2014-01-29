@@ -24,6 +24,6 @@ class SUMOHeavy_BuyerReviews_Block_BuyerReviews extends Mage_Core_Block_Template
     protected function _construct()
     {
         parent::_construct();
-        $this->setTemplate('sumoheavy_buyerreviews/product/view/list/buyerreviews.phtml');
+        $this->setTemplate('sumoheavy_buyerreviews/review/product/view/list/buyerreviews.phtml');
     }
 }
