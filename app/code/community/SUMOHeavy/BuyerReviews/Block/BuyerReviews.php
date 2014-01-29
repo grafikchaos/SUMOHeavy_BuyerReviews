@@ -16,14 +16,14 @@
  * @package     SUMOHeavy_BuyerReviews
  * @copyright   Copyright (c) 2012 SUMO Heavy Industries (http://www.sumoheavy.com)
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
- * @author		Robert Brodie <support@sumoheavy.com>
+ * @author      Robert Brodie <support@sumoheavy.com>
  */
 
 class SUMOHeavy_BuyerReviews_Block_BuyerReviews extends Mage_Core_Block_Template
 {
-	protected function _construct()
-	{
-		parent::_construct();
-		$this->setTemplate('sumoheavy_buyerreviews/product/view/list/buyerreviews.phtml');
-	}
+    protected function _construct()
+    {
+        parent::_construct();
+        $this->setTemplate('sumoheavy_buyerreviews/product/view/list/buyerreviews.phtml');
+    }
 }

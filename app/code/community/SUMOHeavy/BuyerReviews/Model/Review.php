@@ -16,36 +16,37 @@
  * @package     SUMOHeavy_BuyerReviews
  * @copyright   Copyright (c) 2012 SUMO Heavy Industries (http://www.sumoheavy.com)
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
- * @author		Robert Brodie <support@sumoheavy.com>
+ * @author      Robert Brodie <support@sumoheavy.com>
  */
 
-class SUMOHeavy_BuyerReviews_Model_Review extends Mage_Review_Model_Review {
-	
-	function __construct()
-	{
-		parent::__construct();
-	}
-	
-	/**
-	 * Check if current review is someone who purchased or not
-	 *
-	 * @return bool
-	 */
-	public function isBuyer()
-	{
-		$customerId = $this->getCustomerId();
-		$productId = $this->getEntityPkValue();
-	
-		if($customerId && $productId)
-		{
-			$orderItems = Mage::getResourceModel('sales/order_item_collection')
-				->join('sales/order', 'order_id=entity_id')
-				->addFieldToFilter('customer_id', $customerId)
-				->addFieldToFilter('product_id', $productId);
+class SUMOHeavy_BuyerReviews_Model_Review extends Mage_Review_Model_Review
+{
 
-			return $orderItems->getSize() > 0;
-		}
+    function __construct()
+    {
+        parent::__construct();
+    }
 
-		return false;
-	}
+    /**
+     * Check if current review is someone who purchased or not
+     *
+     * @return bool
+     */
+    public function isBuyer()
+    {
+        $customerId = $this->getCustomerId();
+        $productId = $this->getEntityPkValue();
+
+        if($customerId && $productId)
+        {
+            $orderItems = Mage::getResourceModel('sales/order_item_collection')
+                ->join('sales/order', 'order_id=entity_id')
+                ->addFieldToFilter('customer_id', $customerId)
+                ->addFieldToFilter('product_id', $productId);
+
+            return $orderItems->getSize() > 0;
+        }
+
+        return false;
+    }
 }
