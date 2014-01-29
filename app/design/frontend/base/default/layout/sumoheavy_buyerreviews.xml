@@ -24,12 +24,14 @@
 <!--
 Default layout, loads most of the pages
 -->
-    <reference name="head">
-        <action method="addItem">
-            <type>skin_css</type>
-            <name>sumoheavy_buyerreviews/css/buyerreviews.css</name>
-        </action>
-    </reference>
+    <default>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>sumoheavy_buyerreviews/css/buyerreviews.css</name>
+            </action>
+        </reference>
+    </default>
 
     <review_product_list translate="label">
         <reference name="product.info">
